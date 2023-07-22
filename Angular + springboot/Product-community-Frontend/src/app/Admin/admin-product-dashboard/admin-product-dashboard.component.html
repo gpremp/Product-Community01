@@ -1,0 +1,144 @@
+<div class="navbar">
+    <div class="icon">
+        <h2 class="logo">Product Community</h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a [routerLink]="''">HOME</a></li>
+            <li>
+                <h6>WELCOME {{getUser()}}</h6>
+            </li>
+            <li><a [routerLink]="'/adminDashboard'">DASHBOARD</a></li>
+            <li><a (click)="logout()">LOGOUT</a></li>
+
+        </ul>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col header">
+            <h3>
+                <p>Product Details
+                <p>
+            </h3>
+        </div>
+
+    </div>
+
+    <div class="row align-items-center">
+
+        <div class="col">
+            <table style="float: right;">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Product Code</p>
+                        </th>
+                        <th>
+                            <p>{{product.productCode}}</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Product Name</p>
+                        </th>
+                        <th>
+                            <p>{{product.productName}}</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Product Brand</p>
+                        </th>
+                        <th>
+                            <p>{{product.productBrand}}
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="col">
+            <table style="float: left;">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Product Rating</p>
+                        </th>
+                        <th>
+                            <p>{{product.productRating}}
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>No. of Reviews</p>
+                        </th>
+                        <th>
+                            <p>{{product.noOfReviews}}
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Product Price</p>
+                        </th>
+                        <th>
+                            <p>{{product.productPrice}}
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col header">
+            <h3>
+                <p>Product Reviews
+                <p>
+            </h3>
+        </div>
+
+    </div>
+    <div class="row align-items-center">
+        <div class="col card">
+            <table style="align-self: center;">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>S.No</p>
+                        </th>
+                        <th>
+                            <p>Review</p>
+                        </th>
+                        <th>
+                            <p>Rating</p>
+                        </th>
+                        <th>
+                            <p>Approve</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let review of reviews; let i = index">
+                    <tr>
+                        <th>
+                            <p>{{i+1}}</p>
+                        </th>
+                        <th>
+                            <p>{{review.review}}</p>
+                        </th>
+                        <th>
+                            <p>{{review.rating}}</p>
+                        </th>
+                        <th>
+                            <p>{{review.approve}}</p>
+                        </th>
+                        <th>
+                            <a (click)="approved(review)" class="btn btn-success active" role="button"
+                                aria-pressed="true">Approved</a>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

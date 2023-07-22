@@ -1,0 +1,83 @@
+
+.navbar{
+    background:black;
+    height: 70px;
+    border-radius: 10px;
+} 
+.icon{
+    width: fit-content;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #ff7200;
+    font-size: 32px;
+    font-family: Ariala;
+    padding-left: 20px;
+    float: left;
+    padding-top: 5px;
+}
+.menu{
+    float: right;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+.btn:focus{
+    outline: none;
+}
+
+
+.card{
+    width: fit-content;
+    height: fit-content;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    margin-top: 50px;
+}
+.card.col-2{
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%);
+    border-radius: 100px;
+}
+h3, h4{
+    align-self: center;
+    color: #ff7200;
+}
+

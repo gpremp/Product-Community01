@@ -1,0 +1,73 @@
+<div class="navbar">
+    <div class="icon">
+        <h2 class="logo">Product Community</h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a [routerLink]="''">HOME</a></li>
+            <li>
+                <h5>WELCOME {{getUser()}}</h5>
+            </li>
+            <li><a routerLink="product">Add Product</a></li>
+            <li><a (click)="logout()">LOGOUT</a></li>
+
+        </ul>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2>Add Product</h2>
+
+            <form (ngSubmit)="saveProduct()" class="product-form">
+              <div class="form-column">
+                <div class="form-section">
+                  <label for="productCode">Product Code:</label>
+                  <input type="number" id="productCode" name="productCode" [(ngModel)]="product.productCode" required>
+                  <h6 class="error" id="code"></h6>
+                </div>
+            
+                <div class="form-section">
+                  <label for="productName">Product Name:</label>
+                  <input type="text" id="productName" name="productName" [(ngModel)]="product.productName" required>
+                  <h6 class="error" id="name"></h6>
+                </div>
+            
+                <div class="form-section">
+                  <label for="productBrand">Product Brand:</label>
+                  <input type="text" id="productBrand" name="productBrand" [(ngModel)]="product.productBrand" required>
+                  <h6 class="error" id="brand"></h6>
+                </div>
+              </div>
+            
+              <div class="form-column">
+                <div class="form-section">
+                  <label for="productRating">Product Rating:</label>
+                  <input type="number" id="productRating" name="productRating" [(ngModel)]="product.productRating" required>
+                  <h6 class="error" id="rating"></h6>
+                </div>
+            
+                <div class="form-section">
+                  <label for="noOfReviews">Number of Reviews:</label>
+                  <input type="number" id="noOfReviews" name="noOfReviews" [(ngModel)]="product.noOfReviews" required>
+                  <h6 class="error" id="Review"></h6>
+                </div>
+            
+                <div class="form-section">
+                  <label for="productPrice">Product Price:</label>
+                  <input type="number" id="productPrice" name="productPrice" [(ngModel)]="product.productPrice" required>
+                  <h6 class="error" id="price"></h6>
+                </div>
+              </div>
+            <div>
+                <button type="submit">Save</button>
+            </div>
+            
+            </form>
+            
+        </div>
+       
+    </div>
+</div>

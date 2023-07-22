@@ -1,0 +1,20 @@
+
+<div class="card-header">
+    <h2>Register Here</h2>
+  </div>
+<form class="form" (ngSubmit)="signupFormSumbit()">
+    <i class="fas fa-user"></i>
+    <input class="input" type="text" name="name" [(ngModel)]="user.name" placeholder="Enter Name Here">
+    <h6 class="error" id="name"></h6>
+    <i class="fas fa-envelope"></i>
+    <input type="email" name="email" [(ngModel)]="user.email" placeholder="Enter Email Here">
+    <h6 class="error" id="email"></h6>
+    <i class="fas fa-lock"></i>
+    <input type="password" name="password" [(ngModel)]="user.password" placeholder="Enter Password Here">
+    <h6 class="error" id="password"></h6>
+    <button type="submit" class="btnn">Register</button>
+
+    <p class="link">Already Have an account<br>
+    <a routerLink="">Sign in here</a></p>
+
+</form>

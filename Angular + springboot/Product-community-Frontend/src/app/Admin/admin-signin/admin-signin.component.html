@@ -1,0 +1,12 @@
+<div class="card-header">
+  <h2>Admin Login</h2>
+</div>
+<form class="form" (ngSubmit)="signinForm()">
+  <i class="fas fa-envelope"></i><input type="email" name="email" [(ngModel)]="user.email"
+    placeholder="Enter Email Here">
+  <i class="fas fa-lock"></i><input type="password" name="password" [(ngModel)]="user.password"
+    placeholder="Enter Password Here">
+  <h6 class="error" id="error"></h6>
+  <button type="submit" class="btnn">Login</button>
+
+</form>

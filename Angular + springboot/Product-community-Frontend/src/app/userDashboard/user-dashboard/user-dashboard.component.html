@@ -1,0 +1,58 @@
+<div class="navbar">
+    <div class="icon">
+        <h2 class="logo">Product Community</h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a [routerLink]="''">HOME</a></li>
+            <li>
+                <h6>WELCOME {{getUser()}}</h6>
+            </li>
+            <li><a [routerLink]="'/userdashboard/askReview'">Ask for Review</a></li>
+            <li><a (click)="logout()">LOGOUT</a></li>
+
+        </ul>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="card-header">
+                <h3>Search Product</h3>
+            </div>
+            <form class="form" (ngSubmit)="productSearch()">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>Product code</p>
+                        </th>
+                        <th><input class="input" type="number" name="productCode" [(ngModel)]="productData.productCode"
+                                placeholder="Product code"></th>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>Product Brand</p>
+                        </th>
+                        <th><input type="text" name="productBrand" [(ngModel)]="productData.productBrand"
+                                placeholder="Product Brand"></th>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>Product Name</p>
+                        </th>
+                        <th><input type="text" name="productName" [(ngModel)]="productData.productName"
+                                placeholder="Product name"></th>
+                    </tr>
+                </table>
+                <h6></h6>
+                <button class="btnn" type="submit">Search</button>
+
+            </form>
+        </div>
+        <div class="col-8">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

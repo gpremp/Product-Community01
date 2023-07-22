@@ -1,0 +1,42 @@
+table, th{
+    border:1px solid whitesmoke;
+    border-collapse: collapse;
+  }
+table{
+ margin-left: auto;
+  margin-right: auto;
+}
+table{
+    width: 850px;
+    margin-top: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+}
+p{
+    color: aliceblue;
+    margin: 5px;
+    align-self: center;
+}
+.btn{
+    margin: 5px;
+}
+select,input{
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%);
+    color: aliceblue;
+    margin-left: 8px;
+    border: solid 1px orange;
+    border-radius: 3px;
+}
+option{
+    background: linear-gradient(to top, rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%);
+    color: black;
+}
+label{
+    color: aliceblue;
+    margin-left: 3%;
+}
+.btnn{
+    background: orangered;
+}

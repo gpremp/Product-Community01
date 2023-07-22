@@ -1,0 +1,44 @@
+<div class="navbar">
+  <div class="icon">
+    <h2 class="logo">Product Community</h2>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a [routerLink]="''">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a routerLink="adminSignup">ADMIN</a></li>
+      <li><a routerLink="signup">REGISTER</a>//<a routerLink="">LOGIN</a></li>
+
+    </ul>
+  </div>
+
+</div>
+
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <div class="card col-2">
+      <h4>No of Users</h4>
+      <h3>{{stats.noOfUsers}}</h3>
+    </div>
+    <div class="card col-2">
+      <h4>No of Products</h4>
+      <h3>{{stats.noOfProducts}}</h3>
+    </div>
+    <div class="card col-2">
+      <h4>No of Reviews</h4>
+      <h3>{{stats.noOfreviews}}</h3>
+    </div>
+    <div class="col-1">
+
+    </div>
+    <div class="col-1">
+
+    </div>
+    <div class="card col-3 formCard">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<label for="productFilter">Filter By</label>
+<select id="productFilter" id="productFilter">
+  <option value="code"><p>Product Code</p></option>
+  <option value="name">Product Name</option>
+  <option value="brand">Product Brand</option>
+</select>
+<input type="text" id="inputFilter">
+<button type="button" (click)="filterProducts()" class="btn btn-success btnn">Submit</button>
+<button type="button" (click)="clearFilter()" class="btn btn-success active">Clear Filter</button>
+<div class="col-8">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <p>Product Code</p>
+                </th>
+                <th>
+                    <p>Product Code</p>
+                </th>
+                <th>
+                    <p>Product Name</p>
+                </th>
+                <th>
+                    <p>Product Brand</p>
+                </th>
+                <th>
+                    <p>Product Rating</p>
+                </th>
+                <th>
+                    <p>No. of Reviews</p>
+                </th>
+                <th>
+                    <p>Product Price</p>
+                </th>
+                <th>
+                    <p>Action</p>
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let product of showProducts; let i = index;">
+            <tr>
+                <th>
+                    <p>{{i+1}}</p>
+                </th>
+                <th>
+                    <p>{{product.productCode}}</p>
+                </th>
+                <th>
+                    <p>{{product.productName}}</p>
+                </th>
+                <th>
+                    <p>{{product.productBrand}}
+                </th>
+                <th>
+                    <p>{{product.productRating}}
+                </th>
+                <th>
+                    <p>{{product.noOfReviews}}
+                </th>
+                <th>
+                    <p>{{product.productPrice}}
+                </th>
+                <th>
+                    <a [routerLink]="'/userdashboard/product/'+product.productCode" class="btn btn-success active"
+                        role="button" aria-pressed="true">select</a>
+                </th>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,127 @@
+<div class="navbar">
+    <div class="icon">
+        <h2 class="logo">Product Community</h2>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a [routerLink]="''">HOME</a></li>
+            <li>
+                <h6>WELCOME {{getUser()}}</h6>
+            </li>
+            <li><a routerLink="product">Add Product</a></li>
+            <li><a (click)="logout()">LOGOUT</a></li>
+
+        </ul>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3">
+            <div class="card-header">
+                <h3>Search Product</h3>
+            </div>
+            <form class="form" (ngSubmit)="productSearch()">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>Product code</p>
+                        </th>
+                        <th><input class="input" type="number" name="productCode" [(ngModel)]="productData.productCode"
+                                placeholder="Product code"></th>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>Product Brand</p>
+                        </th>
+                        <th><input type="text" name="productBrand" [(ngModel)]="productData.productBrand"
+                                placeholder="Product Brand"></th>
+                    </tr>
+                    <tr>
+                        <th style="width: 50%;">
+                            <p>Product Name</p>
+                        </th>
+                        <th><input type="text" name="productName" [(ngModel)]="productData.productName"
+                                placeholder="Product name"></th>
+                    </tr>
+                </table>
+                <h6></h6>
+                <button class="btnn" type="submit">Search</button>
+
+            </form>
+        </div>
+        <div class="col-8">
+            <label for="productFilter">Filter By</label>
+<select id="productFilter" id="productFilter">
+  <option value="code"><p>Product Code</p></option>
+  <option value="name">Product Name</option>
+  <option value="brand">Product Brand</option>
+</select>
+<input type="text" id="inputFilter">
+<button type="button" (click)="filterProducts()" class="btn btn-success">Submit</button>
+<button type="button" (click)="clearFilter()" class="btn btn-success active">Clear Filter</button>
+            <table class="tab">
+                <thead>
+                    <tr>
+                        <th>
+                            <p>Product Code</p>
+                        </th>
+                        <th>
+                            <p>Product Code</p>
+                        </th>
+                        <th>
+                            <p>Product Name</p>
+                        </th>
+                        <th>
+                            <p>Product Brand</p>
+                        </th>
+                        <th>
+                            <p>Product Rating</p>
+                        </th>
+                        <th>
+                            <p>No. of Reviews</p>
+                        </th>
+                        <th>
+                            <p>Product Price</p>
+                        </th>
+                        <th>
+                            <p>Action</p>
+                        </th>
+                    </tr>
+                </thead>
+                <!-- *ngFor="let student of students" -->
+                <tbody *ngFor="let product of showProducts; let i = index">
+                    <tr>
+                        <th>
+                            <p>{{i+1}}</p>
+                        </th>
+                        <th>
+                            <p>{{product.productCode}}</p>
+                        </th>
+                        <th>
+                            <p>{{product.productName}}</p>
+                        </th>
+                        <th>
+                            <p>{{product.productBrand}}
+                        </th>
+                        <th>
+                            <p>{{product.productRating}}
+                        </th>
+                        <th>
+                            <p>{{product.noOfReviews}}
+                        </th>
+                        <th>
+                            <p>{{product.productPrice}}
+                        </th>
+                        <th>
+                            <a [routerLink]="'/adminDashboard/product/'+product.productCode"
+                                class="btn btn-success active" role="button" aria-pressed="true">select</a>
+                        </th>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

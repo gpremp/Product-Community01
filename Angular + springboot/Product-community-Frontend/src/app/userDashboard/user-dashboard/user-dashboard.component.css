@@ -1,0 +1,126 @@
+
+.navbar{
+    background:black;
+    height: 70px;
+    border-radius: 10px;
+} 
+.icon{
+    width: fit-content;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #ff7200;
+    font-size: 32px;
+    font-family: Ariala;
+    padding-left: 20px;
+    float: left;
+    padding-top: 5px;
+}
+.menu{
+    float: right;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul, li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+.btn:focus{
+    outline: none;
+}
+h3{
+    width: auto;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form input{
+    width: 100%;
+    height: 35px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+.col-3{
+    margin-top: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    padding: 10px;
+    border-radius: 10px;
+    height: fit-content;
+    margin-right: 10px;
+}
+.btnn{
+    width: 60%;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: blue;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+p{
+    color: #fff;
+}
+h6{
+    color: #ff7200;
+}

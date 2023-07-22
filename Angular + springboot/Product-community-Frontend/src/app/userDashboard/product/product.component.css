@@ -1,0 +1,90 @@
+
+.navbar{
+    background:black;
+    height: 70px;
+    border-radius: 10px;
+} 
+.icon{
+    width: fit-content;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #ff7200;
+    font-size: 32px;
+    font-family: Ariala;
+    padding-left: 20px;
+    float: left;
+    padding-top: 5px;
+}
+.menu{
+    float: right;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 40px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+p{
+    color: #fff;
+    margin: 6px;
+}
+.card{
+    margin-top: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    padding: 10px;
+    border-radius: 10px;
+    height: fit-content;
+    margin-right: 10px;
+}
+table, th{
+    border:1px solid whitesmoke;
+    border-collapse: collapse;
+    margin: 5px;
+  }
+table{
+    width: max-content;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    border-radius: 10px;
+}
+.header{
+    text-align: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+}
+textarea{
+    background-color: transparent;
+    color: #fff;
+}
+.card-header{
+    color: #fff;
+}
+label{
+    color: #fff;
+    margin-left: 3px;
+    margin-right: 10px;
+}
+.btn{
+    margin-left: 100px;
+}
+h6{
+    color: #ff7200;
+}
